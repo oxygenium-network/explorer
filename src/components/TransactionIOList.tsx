@@ -38,7 +38,7 @@ const TransactionIOList = ({
   IOItemWrapper
 }: TransactionIOListProps) => {
   const getAmounts = (io: explorer.Input | explorer.Output) => [
-    { id: OXM.id, amount: BigInt(io.attoAlphAmount ?? 0) },
+    { id: OXM.id, amount: BigInt(io.attoOxmAmount ?? 0) },
     ...(io.tokens ? io.tokens.map((t) => ({ id: t.id, amount: BigInt(t.amount) })) : [])
   ]
 

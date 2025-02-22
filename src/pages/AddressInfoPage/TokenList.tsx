@@ -58,21 +58,21 @@ const TokenList = ({ tokens, limit, isLoading, className }: TokenListProps) => {
   return (
     <div className={className}>
       {displayedTokens.map((token) => {
-        const isAlph = token.id === OXM.id
+        const isOxm = token.id === OXM.id
 
         return (
           <AssetRow key={token.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <AssetLogoStyled assetId={token.id} size={30} />
             <NameColumn>
               <TokenNameAndTag>
-                <TokenName onClick={() => !isAlph && handleTokenNameClick(token.id)} isAlph={isAlph}>
+                <TokenName onClick={() => !isOxm && handleTokenNameClick(token.id)} isOxm={isOxm}>
                   {token.name || <HashEllipsed hash={token.id} copyTooltipText={t('Copy token ID')} />}
                 </TokenName>
-                {!isAlph && !token.logoURI && token.name && (
+                {!isOxm && !token.logoURI && token.name && (
                   <UnverifiedIcon data-tooltip-id="default" data-tooltip-content="Unverified token" />
                 )}
               </TokenNameAndTag>
-              {token.name && !isAlph && (
+              {token.name && !isOxm && (
                 <TokenHash>
                   <HashEllipsed hash={token.id} copyTooltipText={t('Copy token ID')} />
                 </TokenHash>
@@ -143,12 +143,12 @@ const TokenNameAndTag = styled.div`
   max-width: 250px;
 `
 
-const TokenName = styled.span<{ isAlph: boolean }>`
+const TokenName = styled.span<{ isOxm: boolean }>`
   overflow: hidden;
   text-overflow: ellipsis;
 
-  ${({ isAlph }) =>
-    !isAlph &&
+  ${({ isOxm }) =>
+    !isOxm &&
     css`
       &:hover {
         cursor: pointer;

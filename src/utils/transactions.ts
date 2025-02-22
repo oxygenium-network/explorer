@@ -96,22 +96,22 @@ export const useTransactionInfo = (tx: Transaction | MempoolTransaction, address
 }
 
 // TODO: The following 2 functions could be ported to js-sdk (and properly tested there)
-type AttoAlphAmount = string
+type AttoOxmAmount = string
 type TokenAmount = string
 type Address = string
 
 type UTXO = {
-  attoAlphAmount?: AttoAlphAmount
+  attoOxmAmount?: AttoOxmAmount
   address?: Address
   tokens?: Token[]
 }
 
-export const sumUpAlphAmounts = (utxos: UTXO[]): Record<Address, AttoAlphAmount> => {
-  const validUtxos = utxos.filter((utxo) => utxo.address && utxo.attoAlphAmount)
+export const sumUpOxmAmounts = (utxos: UTXO[]): Record<Address, AttoOxmAmount> => {
+  const validUtxos = utxos.filter((utxo) => utxo.address && utxo.attoOxmAmount)
 
   const grouped = groupBy(validUtxos, 'address')
   const summed = mapValues(grouped, (addressGroup) =>
-    reduce(addressGroup, (sum, utxo) => (BigInt(sum) + BigInt(utxo.attoAlphAmount || 0)).toString(), '0')
+    reduce(addressGroup, (sum, utxo) => (BigInt(sum) + BigInt(utxo.attoOxmAmount || 0)).toString(), '0')
   )
 
   return summed
@@ -138,22 +138,22 @@ export const sumUpTokenAmounts = (utxos: UTXO[]): Record<Address, Record<Token['
 export const IOAmountsDelta = (
   inputs: UTXO[] = [],
   outputs: UTXO[] = []
-): { alph: Record<Address, AttoAlphAmount>; tokens: Record<Address, Record<Token['id'], TokenAmount>> } => {
-  const summedInputsAlph = sumUpAlphAmounts(inputs)
-  const summedOutputsAlph = sumUpAlphAmounts(outputs)
+): { alph: Record<Address, AttoOxmAmount>; tokens: Record<Address, Record<Token['id'], TokenAmount>> } => {
+  const summedInputsOxm = sumUpOxmAmounts(inputs)
+  const summedOutputsOxm = sumUpOxmAmounts(outputs)
   const summedInputTokens = sumUpTokenAmounts(inputs)
   const summedOutputTokens = sumUpTokenAmounts(outputs)
 
-  const allAddresses = uniq([...Object.keys(summedInputsAlph), ...Object.keys(summedOutputsAlph)])
+  const allAddresses = uniq([...Object.keys(summedInputsOxm), ...Object.keys(summedOutputsOxm)])
 
-  const alphDeltas: Record<Address, AttoAlphAmount> = {}
+  const alphDeltas: Record<Address, AttoOxmAmount> = {}
   const tokenDeltas: Record<Address, Record<Token['id'], TokenAmount>> = {}
 
   for (const address of allAddresses) {
-    const deltaAlph = (BigInt(summedOutputsAlph[address] || 0) - BigInt(summedInputsAlph[address] || 0)).toString()
+    const deltaOxm = (BigInt(summedOutputsOxm[address] || 0) - BigInt(summedInputsOxm[address] || 0)).toString()
 
-    if (deltaAlph !== '0') {
-      alphDeltas[address] = deltaAlph
+    if (deltaOxm !== '0') {
+      alphDeltas[address] = deltaOxm
     }
 
     const inputTokens = summedInputTokens[address] || {}

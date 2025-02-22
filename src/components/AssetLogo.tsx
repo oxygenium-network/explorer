@@ -42,7 +42,7 @@ const AssetLogo = (props: AssetLogoProps) => {
   return (
     <AssetLogoStyled className={className} {...props}>
       {assetId === OXM.id ? (
-        <FramedImage src={OxygeniumLogoSVG} borderRadius="full" isAlph />
+        <FramedImage src={OxygeniumLogoSVG} borderRadius="full" isOxm />
       ) : assetType === 'fungible' ? (
         metadata.verified ? (
           <FramedImage src={metadata.logoURI} borderRadius="full" />
@@ -79,12 +79,12 @@ const AssetLogo = (props: AssetLogoProps) => {
 const FramedImage = ({
   src,
   borderRadius,
-  isAlph,
+  isOxm,
   withBorder
 }: {
   src?: string
   borderRadius: 'small' | 'full'
-  isAlph?: boolean
+  isOxm?: boolean
   withBorder?: boolean
 }) => {
   const theme = useTheme()
@@ -96,7 +96,7 @@ const FramedImage = ({
         padding: borderRadius === 'small' ? 0 : 3,
         boxShadow: withBorder ? `0 0 0 1px ${theme.border.primary}` : 'initial'
       }}
-      isAlph={isAlph}
+      isOxm={isOxm}
     >
       <Image style={{ backgroundImage: `url(${src})` }} />
     </ImageFrame>
@@ -124,14 +124,14 @@ const Image = styled.div`
   width: 100%;
 `
 
-const ImageFrame = styled.div<{ isAlph?: boolean }>`
+const ImageFrame = styled.div<{ isOxm?: boolean }>`
   overflow: hidden;
   height: 100%;
   width: 100%;
   background-color: ${({ theme }) => theme.bg.tertiary};
 
-  ${({ isAlph }) =>
-    isAlph &&
+  ${({ isOxm }) =>
+    isOxm &&
     css`
       background: linear-gradient(218.53deg, #0075ff 9.58%, #d340f8 86.74%);
     `};

@@ -168,8 +168,8 @@ const useStatisticsData = (timeInterval: explorer.IntervalType) => {
     fetchAvgBlockTimeData()
     fetchTxVectorData()
     fetchHashrateVectorData()
-    fetchAndUpdateStatsScalar('totalSupply', client.explorer.infos.getInfosSupplyTotalAlph)
-    fetchAndUpdateStatsScalar('circulatingSupply', client.explorer.infos.getInfosSupplyCirculatingAlph)
+    fetchAndUpdateStatsScalar('totalSupply', client.explorer.infos.getInfosSupplyTotalOxm)
+    fetchAndUpdateStatsScalar('circulatingSupply', client.explorer.infos.getInfosSupplyCirculatingOxm)
     fetchAndUpdateStatsScalar('totalTransactions', client.explorer.infos.getInfosTotalTransactions)
   }, [timeInterval])
 

@@ -28,35 +28,35 @@ import { UnverifiedNFTMetadataWithFile } from '@/types/assets'
 import { alphMetadata } from '@/utils/assets'
 
 export const useAssetMetadata = (assetId: string) => {
-  const isAlph = assetId === OXM.id
+  const isOxm = assetId === OXM.id
 
   const verifiedTokenMetadata = useVerifiedTokensMetadata()?.get(assetId)
 
   const { data: assetBaseRaw } = useQuery({
     ...queries.assets.type.one(assetId),
-    enabled: !isAlph && !verifiedTokenMetadata
+    enabled: !isOxm && !verifiedTokenMetadata
   })
   const assetType = assetBaseRaw?.type
 
   const { data: unverifiedFungibleTokenMetadata } = useQuery({
     ...queries.assets.metadata.unverifiedFungibleToken(assetId),
-    enabled: !isAlph && !verifiedTokenMetadata && assetType === 'fungible'
+    enabled: !isOxm && !verifiedTokenMetadata && assetType === 'fungible'
   })
 
   const { data: unverifiedNFTMetadata } = useQuery({
     ...queries.assets.metadata.unverifiedNFT(assetId),
-    enabled: !isAlph && !verifiedTokenMetadata && assetType === 'non-fungible'
+    enabled: !isOxm && !verifiedTokenMetadata && assetType === 'non-fungible'
   })
 
   const { data: nftData } = useQuery({
     ...queries.assets.nftFile.detail(assetId, unverifiedNFTMetadata?.tokenUri ?? ''),
-    enabled: !isAlph && assetType === 'non-fungible' && !!unverifiedNFTMetadata?.tokenUri
+    enabled: !isOxm && assetType === 'non-fungible' && !!unverifiedNFTMetadata?.tokenUri
   })
 
   const unverifiedNFTMetadataWithFile: UnverifiedNFTMetadataWithFile | undefined =
     unverifiedNFTMetadata && nftData ? { ...unverifiedNFTMetadata, file: nftData } : undefined
 
-  if (isAlph) return alphMetadata
+  if (isOxm) return alphMetadata
 
   return (
     verifiedTokenMetadata ||
@@ -71,7 +71,7 @@ export const useAssetsMetadata = (assetIds: string[] = []) => {
   const shouldExecuteQueries = assetIds.length > 0 && !!allVerifiedTokensMetadata
 
   const ids = assetIds.filter((id) => id !== OXM.id)
-  const isAlphIn = assetIds.length !== ids.length
+  const isOxmIn = assetIds.length !== ids.length
 
   const verifiedTokensMetadata = Array.from(allVerifiedTokensMetadata || []).flatMap(([id, m]) =>
     assetIds.includes(id) ? m : []
@@ -110,7 +110,7 @@ export const useAssetsMetadata = (assetIds: string[] = []) => {
     return file ? { ...m, file } : []
   })
 
-  if (isAlphIn) {
+  if (isOxmIn) {
     verifiedTokensMetadata.unshift(alphMetadata)
   }
 

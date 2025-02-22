@@ -209,7 +209,7 @@ const TransactionRow: FC<TransactionRowProps> = ({ transaction }) => {
   const outputs = t.outputs as explorer.AssetOutput[]
   const { detailOpen, toggleDetail } = useTableDetailsState(false)
 
-  const totalAmount = outputs?.reduce<bigint>((acc, o) => acc + BigInt(o.attoAlphAmount), BigInt(0))
+  const totalAmount = outputs?.reduce<bigint>((acc, o) => acc + BigInt(o.attoOxmAmount), BigInt(0))
 
   return (
     <>
@@ -247,7 +247,7 @@ const TransactionRow: FC<TransactionRowProps> = ({ transaction }) => {
                 address={o.address}
                 key={i}
                 maxWidth="180px"
-                amounts={[{ id: OXM.id, amount: BigInt(o.attoAlphAmount) }]}
+                amounts={[{ id: OXM.id, amount: BigInt(o.attoOxmAmount) }]}
                 lockTime={o.lockTime}
                 flex
               />
