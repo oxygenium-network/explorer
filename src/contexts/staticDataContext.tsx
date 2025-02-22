@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Asset } from '@oxygenium/sdk'
+import { Asset } from '@alephium/sdk'
 import { useQuery } from '@tanstack/react-query'
 import { createContext, ReactNode, useContext, useEffect, useState } from 'react'
 

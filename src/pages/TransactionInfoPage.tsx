@@ -16,14 +16,14 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { OXM } from '@oxygenium/token-list'
-import { explorer } from '@oxygenium/web3'
+import { OXM } from '@oxygenium-network/token-list'
+import { explorer } from '@oxygenium-network/web3'
 import {
   AcceptedTransaction,
   PendingTransaction,
   PerChainHeight,
   Transaction
-} from '@oxygenium/web3/dist/src/api/api-explorer'
+} from '@oxygenium-network/web3/dist/src/api/api-explorer'
 import { useQuery } from '@tanstack/react-query'
 import _, { sortBy, uniq } from 'lodash'
 import { useCallback, useRef } from 'react'

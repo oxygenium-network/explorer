@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { TransactionInfoType } from '@oxygenium/sdk'
+import { TransactionInfoType } from '@alephium/sdk'
 import { colord } from 'colord'
 import { RiArrowDownLine, RiArrowLeftRightLine, RiArrowUpLine, RiRepeat2Line } from 'react-icons/ri'
 import { DefaultTheme } from 'styled-components'

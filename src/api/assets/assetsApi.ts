@@ -16,8 +16,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { TokenList } from '@oxygenium/token-list'
-import { hexToString } from '@oxygenium/web3'
+import { TokenList } from '@oxygenium-network/token-list'
+import { hexToString } from '@oxygenium-network/web3'
 
 import client from '@/api/client'
 import {

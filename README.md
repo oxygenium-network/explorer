@@ -56,6 +56,6 @@ To release a new version:
 
 ## Notes
 
-This project uses [@oxygenium/sdk](https://github.com/oxygenium/js-sdk).
+This project uses [@alephium/sdk](https://github.com/oxygenium/js-sdk).
 Please down the package to refer to it as documentation for the network request
 methods (`api/api-explorer.ts`).

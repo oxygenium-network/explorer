@@ -16,8 +16,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { TokenInfo } from '@oxygenium/token-list'
-import { FungibleTokenMetaData, NFTMetaData } from '@oxygenium/web3'
+import { TokenInfo } from '@oxygenium-network/token-list'
+import { FungibleTokenMetaData, NFTMetaData } from '@oxygenium-network/web3'
 
 import client from '@/api/client'
 

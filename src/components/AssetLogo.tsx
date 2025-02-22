@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { OXM } from '@oxygenium/token-list'
+import { OXM } from '@oxygenium-network/token-list'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { RiCopperCoinLine, RiQuestionLine } from 'react-icons/ri'
 import styled, { css, useTheme } from 'styled-components'

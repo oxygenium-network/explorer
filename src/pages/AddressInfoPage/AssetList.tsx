@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { AddressBalance } from '@oxygenium/web3/dist/src/api/api-explorer'
+import { AddressBalance } from '@oxygenium-network/web3/dist/src/api/api-explorer'
 import { useQuery } from '@tanstack/react-query'
 import { flatMap, sortBy } from 'lodash'
 import { useEffect, useMemo, useState } from 'react'

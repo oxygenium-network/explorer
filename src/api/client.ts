@@ -18,7 +18,7 @@ along with the library. If not, see <http://www.gnu.org/licenses/>.
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { ExplorerProvider, NodeProvider } from '@oxygenium/web3'
+import { ExplorerProvider, NodeProvider } from '@oxygenium-network/web3'
 
 import { NetworkType, networkTypes } from '@/types/network'
 

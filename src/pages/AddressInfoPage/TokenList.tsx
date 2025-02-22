@@ -16,8 +16,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { OXM, TokenInfo } from '@oxygenium/token-list'
-import { addressFromTokenId, Optional } from '@oxygenium/web3'
+import { OXM, TokenInfo } from '@oxygenium-network/token-list'
+import { addressFromTokenId, Optional } from '@oxygenium-network/web3'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { RiErrorWarningFill } from 'react-icons/ri'
