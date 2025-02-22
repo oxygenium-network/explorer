@@ -1,6 +1,6 @@
-# Alephium Explorer - Front-end
+# Oxygenium Explorer - Front-end
 
-A blockchain explorer front-end for Alephium.
+A blockchain explorer front-end for Oxygenium.
 
 ## Features
 

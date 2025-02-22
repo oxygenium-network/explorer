@@ -1,5 +1,5 @@
 /*
-Copyright 2018 - 2022 The Alephium Authors
+Copyright 2018 - 2022 The Oxygenium Authors
 This file is part of the oxygenium project.
 
 The library is free software: you can redistribute it and/or modify
@@ -46,7 +46,7 @@ const AppFooter = ({ className }: AppFooterProps) => (
       <span>
         <ExternalLink href="https://github.com/oxygenium/explorer">Source code ↗</ExternalLink>
       </span>
-      <ExternalLink href="https://oxygenium.org">Alephium.org ↗</ExternalLink>
+      <ExternalLink href="https://oxygenium.org">Oxygenium.org ↗</ExternalLink>
       <SocialMediaIconList>
         {socialMediaData.map((d) => (
           <ExternalLink href={d.link} key={d.name}>
@@ -71,7 +71,7 @@ const socialMediaData = [
   },
   {
     name: 'Reddit',
-    link: 'https://www.reddit.com/r/Alephium',
+    link: 'https://www.reddit.com/r/Oxygenium',
     Icon: RedditIcon
   },
   {

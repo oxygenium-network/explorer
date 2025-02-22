@@ -1,5 +1,5 @@
 /*
-Copyright 2018 - 2022 The Alephium Authors
+Copyright 2018 - 2022 The Oxygenium Authors
 This file is part of the oxygenium project.
 
 The library is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@ import { RiCopperCoinLine, RiQuestionLine } from 'react-icons/ri'
 import styled, { css, useTheme } from 'styled-components'
 
 import { useAssetMetadata } from '@/api/assets/assetsHooks'
-import AlephiumLogoSVG from '@/images/oxygenium_logo_monochrome.svg'
+import OxygeniumLogoSVG from '@/images/oxygenium_logo_monochrome.svg'
 
 interface AssetLogoProps {
   assetId: string
@@ -42,7 +42,7 @@ const AssetLogo = (props: AssetLogoProps) => {
   return (
     <AssetLogoStyled className={className} {...props}>
       {assetId === ALPH.id ? (
-        <FramedImage src={AlephiumLogoSVG} borderRadius="full" isAlph />
+        <FramedImage src={OxygeniumLogoSVG} borderRadius="full" isAlph />
       ) : assetType === 'fungible' ? (
         metadata.verified ? (
           <FramedImage src={metadata.logoURI} borderRadius="full" />
