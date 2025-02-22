@@ -1,6 +1,6 @@
 /*
 Copyright 2018 - 2022 The Alephium Authors
-This file is part of the alephium project.
+This file is part of the oxygenium project.
 
 The library is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as published by
@@ -16,10 +16,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { addApostrophes, calculateAmountWorth, getHumanReadableError, isAddressValid } from '@alephium/sdk'
-import { ALPH } from '@alephium/token-list'
-import { contractIdFromAddress, groupOfAddress } from '@alephium/web3'
-import { MempoolTransaction } from '@alephium/web3/dist/src/api/api-explorer'
+import { addApostrophes, calculateAmountWorth, getHumanReadableError, isAddressValid } from '@oxygenium/sdk'
+import { ALPH } from '@oxygenium/token-list'
+import { contractIdFromAddress, groupOfAddress } from '@oxygenium/web3'
+import { MempoolTransaction } from '@oxygenium/web3/dist/src/api/api-explorer'
 import { useQuery } from '@tanstack/react-query'
 import QRCode from 'qrcode.react'
 import { useEffect, useRef, useState } from 'react'
@@ -123,7 +123,7 @@ const AddressInfoPage = () => {
         const balance = addressBalance?.balance
         if (!balance) return
 
-        const price = await fetchAssetPrice('alephium')
+        const price = await fetchAssetPrice('oxygenium')
 
         setAddressWorth(calculateAmountWorth(BigInt(balance), price))
       } catch (e) {

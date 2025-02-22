@@ -1,6 +1,6 @@
 /*
 Copyright 2018 - 2022 The Alephium Authors
-This file is part of the alephium project.
+This file is part of the oxygenium project.
 
 The library is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as published by
@@ -44,9 +44,9 @@ const AppFooter = ({ className }: AppFooterProps) => (
     <RightGroup>
       <Version>v{version}</Version>
       <span>
-        <ExternalLink href="https://github.com/alephium/explorer">Source code ↗</ExternalLink>
+        <ExternalLink href="https://github.com/oxygenium/explorer">Source code ↗</ExternalLink>
       </span>
-      <ExternalLink href="https://alephium.org">Alephium.org ↗</ExternalLink>
+      <ExternalLink href="https://oxygenium.org">Alephium.org ↗</ExternalLink>
       <SocialMediaIconList>
         {socialMediaData.map((d) => (
           <ExternalLink href={d.link} key={d.name}>
@@ -66,7 +66,7 @@ const socialMediaData = [
   },
   {
     name: 'Telegram',
-    link: 'https://t.me/alephiumgroup',
+    link: 'https://t.me/oxygeniumgroup',
     Icon: TelegramIcon
   },
   {
@@ -76,7 +76,7 @@ const socialMediaData = [
   },
   {
     name: 'Twitter',
-    link: 'https://twitter.com/alephium',
+    link: 'https://twitter.com/oxygenium',
     Icon: TwitterIcon
   }
 ]

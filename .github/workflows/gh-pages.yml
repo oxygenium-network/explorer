@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
 
 env:
-  VITE_BACKEND_URL: https://backend-v113.testnet.alephium.org
-  VITE_NODE_URL: https://wallet-v20.testnet.alephium.org
+  VITE_BACKEND_URL: https://backend-v113.testnet.oxygenium.org
+  VITE_NODE_URL: https://wallet-v20.testnet.oxygenium.org
   VITE_NETWORK_TYPE: testnet
 
 # Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages

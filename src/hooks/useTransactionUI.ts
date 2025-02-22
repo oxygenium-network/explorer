@@ -1,6 +1,6 @@
 /*
 Copyright 2018 - 2022 The Alephium Authors
-This file is part of the alephium project.
+This file is part of the oxygenium project.
 
 The library is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as published by
@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { TransactionInfoType } from '@alephium/sdk'
+import { TransactionInfoType } from '@oxygenium/sdk'
 import { colord } from 'colord'
 import { RiArrowDownLine, RiArrowLeftRightLine, RiArrowUpLine, RiRepeat2Line } from 'react-icons/ri'
 import { DefaultTheme } from 'styled-components'
@@ -32,7 +32,7 @@ interface TransactionUIProps {
 
 // Override badge if it's a failed script execution or is inside a contract.
 // TODO: Better (better way to define infoType by looking at presence of script)
-// Use script field in tx once available https://github.com/alephium/explorer-backend/issues/485
+// Use script field in tx once available https://github.com/oxygenium/explorer-backend/issues/485
 
 export const getTransactionUI = ({
   infoType,

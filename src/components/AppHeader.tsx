@@ -1,6 +1,6 @@
 /*
 Copyright 2018 - 2022 The Alephium Authors
-This file is part of the alephium project.
+This file is part of the oxygenium project.
 
 The library is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as published by
@@ -40,7 +40,7 @@ const AppHeader = ({ className }: AppHeaderProps) => {
     <header className={className}>
       <HeaderSideContainer justifyContent="flex-start">
         <StyledLogoLink to="/">
-          <Logo alt="alephium" src={theme.name === 'light' ? logoLightSrc : logoDarkSrc} />
+          <Logo alt="oxygenium" src={theme.name === 'light' ? logoLightSrc : logoDarkSrc} />
         </StyledLogoLink>
       </HeaderSideContainer>
       {(pathname !== '/' || (width && width <= deviceSizes.mobile)) && <StyledSearchBar />}

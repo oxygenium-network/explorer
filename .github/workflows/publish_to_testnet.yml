@@ -9,9 +9,9 @@ env:
   AWS_DEFAULT_REGION: eu-central-1
   AWS_DISTRIBUTION_ID: ${{ secrets.AWS_DISTRIBUTION_ID_TESTNET }}
   AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME_TESTNET }}
-  VITE_BACKEND_URL: https://backend.testnet.alephium.org
+  VITE_BACKEND_URL: https://backend.testnet.oxygenium.org
   VITE_NETWORK_TYPE: testnet
-  VITE_NODE_URL: https://node.testnet.alephium.org
+  VITE_NODE_URL: https://node.testnet.oxygenium.org
 jobs:
   build:
     runs-on: ubuntu-latest

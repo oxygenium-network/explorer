@@ -1,6 +1,6 @@
 /*
 Copyright 2018 - 2022 The Alephium Authors
-This file is part of the alephium project.
+This file is part of the oxygenium project.
 
 The library is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as published by
@@ -16,8 +16,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { TokenList } from '@alephium/token-list'
-import { hexToString } from '@alephium/web3'
+import { TokenList } from '@oxygenium/token-list'
+import { hexToString } from '@oxygenium/web3'
 
 import client from '@/api/client'
 import {
@@ -44,7 +44,7 @@ export const assetsQueries = createQueriesCollection({
       queryKey: ['verifiedTokens', network],
       queryFn: (): Promise<VerifiedFungibleTokenMetadata[]> => {
         try {
-          return fetch(`https://raw.githubusercontent.com/alephium/token-list/master/tokens/${network}.json`).then(
+          return fetch(`https://raw.githubusercontent.com/oxygenium/token-list/master/tokens/${network}.json`).then(
             (r) => r.json().then((j: TokenList) => j.tokens.map((v) => ({ ...v, type: 'fungible', verified: true })))
           )
         } catch (e) {

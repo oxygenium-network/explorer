@@ -1,6 +1,6 @@
 /*
 Copyright 2018 - 2022 The Alephium Authors
-This file is part of the alephium project.
+This file is part of the oxygenium project.
 
 The library is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as published by
@@ -16,8 +16,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { isMempoolTx } from '@alephium/sdk'
-import { MempoolTransaction, Transaction } from '@alephium/web3/dist/src/api/api-explorer'
+import { isMempoolTx } from '@oxygenium/sdk'
+import { MempoolTransaction, Transaction } from '@oxygenium/web3/dist/src/api/api-explorer'
 import _ from 'lodash'
 import { useTranslation } from 'react-i18next'
 import { RiArrowRightLine } from 'react-icons/ri'

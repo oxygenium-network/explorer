@@ -1,6 +1,6 @@
 /*
 Copyright 2018 - 2022 The Alephium Authors
-This file is part of the alephium project.
+This file is part of the oxygenium project.
 
 The library is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as published by
@@ -31,7 +31,7 @@ const NetworkSwitch = ({
 
   const switchToNetwork = (network: string) => {
     if (client.networkType !== network) {
-      window.location.assign(isMainnet ? 'https://explorer.testnet.alephium.org' : 'https://explorer.alephium.org')
+      window.location.assign(isMainnet ? 'https://explorer.testnet.oxygenium.org' : 'https://explorer.oxygenium.org')
     }
   }
 

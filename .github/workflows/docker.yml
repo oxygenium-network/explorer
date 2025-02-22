@@ -49,6 +49,6 @@ jobs:
           file: ./docker/Dockerfile
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           tags: |
-            docker.io/alephium/explorer:${{ steps.get_version.outputs.VERSION-NO-V }}
-            docker.io/alephium/explorer:latest
+            docker.io/oxygenium/explorer:${{ steps.get_version.outputs.VERSION-NO-V }}
+            docker.io/oxygenium/explorer:latest
           push: true
