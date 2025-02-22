@@ -44,7 +44,7 @@ export const assetsQueries = createQueriesCollection({
       queryKey: ['verifiedTokens', network],
       queryFn: (): Promise<VerifiedFungibleTokenMetadata[]> => {
         try {
-          return fetch(`https://raw.githubusercontent.com/oxygenium/token-list/master/tokens/${network}.json`).then(
+          return fetch(`https://raw.githubusercontent.com/oxygenium-network/token-list/master/tokens/${network}.json`).then(
             (r) => r.json().then((j: TokenList) => j.tokens.map((v) => ({ ...v, type: 'fungible', verified: true })))
           )
         } catch (e) {

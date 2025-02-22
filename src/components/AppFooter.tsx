@@ -44,7 +44,7 @@ const AppFooter = ({ className }: AppFooterProps) => (
     <RightGroup>
       <Version>v{version}</Version>
       <span>
-        <ExternalLink href="https://github.com/oxygenium/explorer">Source code ↗</ExternalLink>
+        <ExternalLink href="https://github.com/oxygenium-network/explorer">Source code ↗</ExternalLink>
       </span>
       <ExternalLink href="https://oxygenium.org">Oxygenium.org ↗</ExternalLink>
       <SocialMediaIconList>
