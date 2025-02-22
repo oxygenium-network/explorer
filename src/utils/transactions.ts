@@ -26,7 +26,7 @@ import {
   TransactionInfo,
   TransactionInfoType
 } from '@oxygenium/sdk'
-import { ALPH } from '@oxygenium/token-list'
+import { OXM } from '@oxygenium/token-list'
 import { explorer } from '@oxygenium/web3'
 import { MempoolTransaction, Token, Transaction } from '@oxygenium/web3/dist/src/api/api-explorer'
 import { groupBy, map, mapValues, reduce, sortBy, uniq } from 'lodash'
@@ -84,7 +84,7 @@ export const useTransactionInfo = (tx: Transaction | MempoolTransaction, address
     (v) => (v.type === 'fungible' ? v.symbol : v.file?.name)
   ])
 
-  const assets = amount !== undefined ? [{ ...ALPH, amount }, ...sortedTokens] : sortedTokens
+  const assets = amount !== undefined ? [{ ...OXM, amount }, ...sortedTokens] : sortedTokens
 
   return {
     assets,

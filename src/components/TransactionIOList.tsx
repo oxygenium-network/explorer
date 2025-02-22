@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { ALPH } from '@oxygenium/token-list'
+import { OXM } from '@oxygenium/token-list'
 import { explorer } from '@oxygenium/web3'
 import { ReactElement, ReactNode } from 'react'
 
@@ -38,7 +38,7 @@ const TransactionIOList = ({
   IOItemWrapper
 }: TransactionIOListProps) => {
   const getAmounts = (io: explorer.Input | explorer.Output) => [
-    { id: ALPH.id, amount: BigInt(io.attoAlphAmount ?? 0) },
+    { id: OXM.id, amount: BigInt(io.attoAlphAmount ?? 0) },
     ...(io.tokens ? io.tokens.map((t) => ({ id: t.id, amount: BigInt(t.amount) })) : [])
   ]
 

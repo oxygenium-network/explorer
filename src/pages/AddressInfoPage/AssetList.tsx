@@ -63,7 +63,7 @@ const AssetList = ({ addressHash, addressBalance, limit, className }: AssetListP
       return balance ? [{ ...t, balance: BigInt(balance.balance), lockedBalance: BigInt(balance.lockedBalance) }] : []
     })
 
-    // Add ALPH
+    // Add OXM
     if (addressBalance && BigInt(addressBalance.balance) > 0) {
       unsorted.unshift({
         ...alphMetadata,

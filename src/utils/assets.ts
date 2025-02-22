@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { ALPH } from '@oxygenium/token-list'
+import { OXM } from '@oxygenium/token-list'
 import { groupBy, map, mapValues } from 'lodash'
 
 import { AssetBase, AssetType, VerifiedFungibleTokenMetadata } from '@/types/assets'
@@ -44,4 +44,4 @@ export const getCategorizedAssetIds = (assets: AssetBase[] = []): AssetIdCategor
   }
 }
 
-export const alphMetadata = { ...ALPH, type: 'fungible', verified: true } as VerifiedFungibleTokenMetadata
+export const alphMetadata = { ...OXM, type: 'fungible', verified: true } as VerifiedFungibleTokenMetadata

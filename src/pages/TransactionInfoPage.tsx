@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { ALPH } from '@oxygenium/token-list'
+import { OXM } from '@oxygenium/token-list'
 import { explorer } from '@oxygenium/web3'
 import {
   AcceptedTransaction,
@@ -249,7 +249,7 @@ const TransactionInfoPage = () => {
                     <AssetLogos>
                       <>
                         {Object.keys(alphDeltaAmounts).length > 0 && (
-                          <AssetLogo assetId={ALPH.id} size={20} showTooltip />
+                          <AssetLogo assetId={OXM.id} size={20} showTooltip />
                         )}
                         {getSortedTokens(assetIds).map((a) => (
                           <AssetLogo key={a.tokenId} assetId={a.tokenId} size={20} showTooltip />
@@ -289,12 +289,12 @@ const TransactionInfoPage = () => {
                 <TableRow>
                   <span>{t('Gas Price')}</span>
 
-                  <Amount assetId={ALPH.id} value={BigInt(transactionData.gasPrice)} fullPrecision />
+                  <Amount assetId={OXM.id} value={BigInt(transactionData.gasPrice)} fullPrecision />
                 </TableRow>
                 <TableRow>
                   <span>{t('Transaction Fee')}</span>
                   <Amount
-                    assetId={ALPH.id}
+                    assetId={OXM.id}
                     value={BigInt(transactionData.gasPrice) * BigInt(transactionData.gasAmount)}
                     fullPrecision
                   />
@@ -318,7 +318,7 @@ const TransactionInfoPage = () => {
                             value={BigInt(alphDeltaAmounts[addressHash])}
                             displaySign={true}
                             highlight
-                            assetId={ALPH.id}
+                            assetId={OXM.id}
                           />
                         )}
                         {getSortedTokenAmounts(addressHash).map((v) => (

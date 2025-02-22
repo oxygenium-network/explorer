@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { ALPH } from '@oxygenium/token-list'
+import { OXM } from '@oxygenium/token-list'
 import { useQuery } from '@tanstack/react-query'
 import { flatMap } from 'lodash'
 import { useMemo } from 'react'
@@ -28,7 +28,7 @@ import { UnverifiedNFTMetadataWithFile } from '@/types/assets'
 import { alphMetadata } from '@/utils/assets'
 
 export const useAssetMetadata = (assetId: string) => {
-  const isAlph = assetId === ALPH.id
+  const isAlph = assetId === OXM.id
 
   const verifiedTokenMetadata = useVerifiedTokensMetadata()?.get(assetId)
 
@@ -70,7 +70,7 @@ export const useAssetsMetadata = (assetIds: string[] = []) => {
 
   const shouldExecuteQueries = assetIds.length > 0 && !!allVerifiedTokensMetadata
 
-  const ids = assetIds.filter((id) => id !== ALPH.id)
+  const ids = assetIds.filter((id) => id !== OXM.id)
   const isAlphIn = assetIds.length !== ids.length
 
   const verifiedTokensMetadata = Array.from(allVerifiedTokensMetadata || []).flatMap(([id, m]) =>

@@ -17,7 +17,7 @@ along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
 import { APIError } from '@oxygenium/sdk'
-import { ALPH } from '@oxygenium/token-list'
+import { OXM } from '@oxygenium/token-list'
 import { explorer } from '@oxygenium/web3'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -247,7 +247,7 @@ const TransactionRow: FC<TransactionRowProps> = ({ transaction }) => {
                 address={o.address}
                 key={i}
                 maxWidth="180px"
-                amounts={[{ id: ALPH.id, amount: BigInt(o.attoAlphAmount) }]}
+                amounts={[{ id: OXM.id, amount: BigInt(o.attoAlphAmount) }]}
                 lockTime={o.lockTime}
                 flex
               />

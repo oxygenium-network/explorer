@@ -17,7 +17,7 @@ along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
 import { addApostrophes, calculateAmountWorth, getHumanReadableError, isAddressValid } from '@oxygenium/sdk'
-import { ALPH } from '@oxygenium/token-list'
+import { OXM } from '@oxygenium/token-list'
 import { contractIdFromAddress, groupOfAddress } from '@oxygenium/web3'
 import { MempoolTransaction } from '@oxygenium/web3/dist/src/api/api-explorer'
 import { useQuery } from '@tanstack/react-query'
@@ -114,7 +114,7 @@ const AddressInfoPage = () => {
     latestTransaction && latestTransaction.length > 0 ? latestTransaction[0].timestamp : undefined
 
   // Asset price
-  // TODO: when listed tokens, add resp. prices. ALPH only for now.
+  // TODO: when listed tokens, add resp. prices. OXM only for now.
   useEffect(() => {
     setAddressWorth(undefined)
 
@@ -191,15 +191,15 @@ const AddressInfoPage = () => {
       <InfoGridAndQR>
         <InfoGrid>
           <InfoGrid.Cell
-            label={t('ALPH balance')}
-            value={totalBalance && <Amount assetId={ALPH.id} value={BigInt(totalBalance)} />}
+            label={t('OXM balance')}
+            value={totalBalance && <Amount assetId={OXM.id} value={BigInt(totalBalance)} />}
             sublabel={
               lockedBalance &&
               lockedBalance !== '0' && (
                 <Badge
                   content={
                     <span>
-                      {t('Locked')}: <Amount assetId={ALPH.id} value={BigInt(lockedBalance)} />
+                      {t('Locked')}: <Amount assetId={OXM.id} value={BigInt(lockedBalance)} />
                     </span>
                   }
                   type="neutral"

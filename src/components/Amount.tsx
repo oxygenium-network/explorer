@@ -114,7 +114,7 @@ const Amount = ({
               integralPart
             )}
           </NumberContainer>
-          <Suffix color={overrideSuffixColor ? color : undefined}> {usedSuffix ?? 'ALPH'}</Suffix>
+          <Suffix color={overrideSuffixColor ? color : undefined}> {usedSuffix ?? 'OXM'}</Suffix>
         </>
       ) : assetType === 'non-fungible' && assetId ? (
         <NFT>

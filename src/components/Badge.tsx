@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { ALPH } from '@oxygenium/token-list'
+import { OXM } from '@oxygenium/token-list'
 import { colord } from 'colord'
 import styled, { css, DefaultTheme } from 'styled-components'
 
@@ -42,7 +42,7 @@ const Badge = ({ content, className, amount, assetId, displayAmountSign = false 
     <BadgeContent>
       {amount ? (
         <Amount
-          assetId={assetId || ALPH.id}
+          assetId={assetId || OXM.id}
           value={BigInt(amount)}
           displaySign={displayAmountSign}
           highlight={displayAmountSign}

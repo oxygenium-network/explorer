@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { ALPH, TokenInfo } from '@oxygenium/token-list'
+import { OXM, TokenInfo } from '@oxygenium/token-list'
 import { addressFromTokenId, Optional } from '@oxygenium/web3'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
@@ -58,7 +58,7 @@ const TokenList = ({ tokens, limit, isLoading, className }: TokenListProps) => {
   return (
     <div className={className}>
       {displayedTokens.map((token) => {
-        const isAlph = token.id === ALPH.id
+        const isAlph = token.id === OXM.id
 
         return (
           <AssetRow key={token.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>

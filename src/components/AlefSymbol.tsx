@@ -27,7 +27,7 @@ interface AlefSymbolProps {
 
 const AlefSymbol = ({ className, color }: AlefSymbolProps) => (
   <span className={className}>
-    <HiddenForCopying>&nbsp;ALPH</HiddenForCopying>
+    <HiddenForCopying>&nbsp;OXM</HiddenForCopying>
     <AlefSymbolSVG color={color} />
   </span>
 )
