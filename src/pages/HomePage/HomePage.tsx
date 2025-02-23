@@ -17,7 +17,7 @@ along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
 import { addApostrophes } from '@alephium/sdk'
-import { explorer } from '@oxygenium-network/web3'
+import { explorer } from '@oxygenium/web3'
 import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
 import { AnimatePresence } from 'framer-motion'

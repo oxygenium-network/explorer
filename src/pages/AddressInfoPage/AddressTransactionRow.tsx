@@ -17,7 +17,7 @@ along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
 import { isMempoolTx } from '@alephium/sdk'
-import { MempoolTransaction, Transaction } from '@oxygenium-network/web3/dist/src/api/api-explorer'
+import { MempoolTransaction, Transaction } from '@oxygenium/web3/dist/src/api/api-explorer'
 import _ from 'lodash'
 import { useTranslation } from 'react-i18next'
 import { RiArrowRightLine } from 'react-icons/ri'

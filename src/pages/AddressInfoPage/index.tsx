@@ -18,8 +18,8 @@ along with the library. If not, see <http://www.gnu.org/licenses/>.
 
 import { addApostrophes, calculateAmountWorth, getHumanReadableError, isAddressValid } from '@alephium/sdk'
 import { OXM } from '@oxygenium-network/token-list'
-import { contractIdFromAddress, groupOfAddress } from '@oxygenium-network/web3'
-import { MempoolTransaction } from '@oxygenium-network/web3/dist/src/api/api-explorer'
+import { contractIdFromAddress, groupOfAddress } from '@oxygenium/web3'
+import { MempoolTransaction } from '@oxygenium/web3/dist/src/api/api-explorer'
 import { useQuery } from '@tanstack/react-query'
 import QRCode from 'qrcode.react'
 import { useEffect, useRef, useState } from 'react'

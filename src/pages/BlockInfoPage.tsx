@@ -18,7 +18,7 @@ along with the library. If not, see <http://www.gnu.org/licenses/>.
 
 import { APIError } from '@alephium/sdk'
 import { OXM } from '@oxygenium-network/token-list'
-import { explorer } from '@oxygenium-network/web3'
+import { explorer } from '@oxygenium/web3'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { RiArrowRightLine } from 'react-icons/ri'

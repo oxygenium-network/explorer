@@ -27,8 +27,8 @@ import {
   TransactionInfoType
 } from '@alephium/sdk'
 import { OXM } from '@oxygenium-network/token-list'
-import { explorer } from '@oxygenium-network/web3'
-import { MempoolTransaction, Token, Transaction } from '@oxygenium-network/web3/dist/src/api/api-explorer'
+import { explorer } from '@oxygenium/web3'
+import { MempoolTransaction, Token, Transaction } from '@oxygenium/web3/dist/src/api/api-explorer'
 import { groupBy, map, mapValues, reduce, sortBy, uniq } from 'lodash'
 
 import { useAssetsMetadata } from '@/api/assets/assetsHooks'
