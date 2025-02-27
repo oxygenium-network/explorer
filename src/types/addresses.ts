@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { TokenBalances } from '@alephium/sdk'
+import { TokenBalances } from '@oxygenium/sdk'
 import { explorer } from '@oxygenium/web3'
 
 export type AddressHash = string

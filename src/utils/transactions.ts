@@ -25,7 +25,7 @@ import {
   TransactionDirection,
   TransactionInfo,
   TransactionInfoType
-} from '@alephium/sdk'
+} from '@oxygenium/sdk'
 import { OXM } from '@oxygenium-network/token-list'
 import { explorer } from '@oxygenium/web3'
 import { MempoolTransaction, Token, Transaction } from '@oxygenium/web3/dist/src/api/api-explorer'

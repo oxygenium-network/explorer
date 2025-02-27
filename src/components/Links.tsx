@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { AssetAmount } from '@alephium/sdk'
+import { AssetAmount } from '@oxygenium/sdk'
 import dayjs from 'dayjs'
 import { map } from 'lodash'
 import { RiExternalLinkLine } from 'react-icons/ri'

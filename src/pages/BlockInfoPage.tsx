@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with the library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { APIError } from '@alephium/sdk'
+import { APIError } from '@oxygenium/sdk'
 import { OXM } from '@oxygenium-network/token-list'
 import { explorer } from '@oxygenium/web3'
 import { useEffect, useState } from 'react'
