@@ -10,7 +10,7 @@
   "dependencies": {
     "@oxygenium/sdk": "0.7.6",
     "@oxygenium-network/token-list": "^0.0.20",
-    "@oxygenium/web3": "0.16.1-4",
+    "@oxygenium/web3": "1.11.3-2",
     "@tanstack/query-sync-storage-persister": "4.32.0",
     "@tanstack/react-query": "4.32.0",
     "@tanstack/react-query-persist-client": "^4.32.0",
